@@ -23,7 +23,7 @@ int main() {
     cin >> initial_balance;
     account1.set_balance(initial_balance);
 
-    account1.deposit(500.0);
+    
     cout << "Account Name: " << account1.get_name() << endl;
     cout << "Account Balance: $" << account1.get_balance() << endl;
 
