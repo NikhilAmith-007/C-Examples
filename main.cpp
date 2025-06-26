@@ -27,6 +27,11 @@ int main() {
     cout << "Account Name: " << account1.get_name() << endl;
     cout << "Account Balance: $" << account1.get_balance() << endl;
 
+    cout<< "Withdrawing $200 from the account..." << endl;
+    account1.withdraw(200.0);
+    cout << "Account Balance after withdrawal: $" << account1.get_balance() << endl;
+    
+    
     return 0;
 }
 
