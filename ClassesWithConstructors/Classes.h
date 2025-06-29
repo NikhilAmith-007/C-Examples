@@ -10,9 +10,8 @@ private:
     int health;
     std::string name;
 public:
-    Player(std::string nam_val, int health_val);
-    Player();
-    Player(std::string name_val);
+    Player(std::string nam_val= "None", int health_val = 100);
+
    
 
     void talk(std::string);
