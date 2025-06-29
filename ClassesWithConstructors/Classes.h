@@ -7,12 +7,13 @@ using namespace std;
 class Player{
 
 private:
-    int health{100};
-    std::string name{"Default Player"};
+    int health;
+    std::string name;
 public:
-    Player(){cout<< "no args constructor called" << endl;}
-    Player(std::string name){cout <<"one args constructor called" << endl;}
-    Player(std::string name, int health){cout << "two args constructor called" << endl;}
+    Player(std::string nam_val, int health_val);
+    Player();
+    Player(std::string name_val);
+   
 
     void talk(std::string);
     void set_name(std::string);
