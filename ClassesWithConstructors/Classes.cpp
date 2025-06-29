@@ -21,7 +21,3 @@ void Player::set_health(int new_health) {
 int Player::get_health() {
     return health;
 }
-
-Player::Player() : health(100), name("Default Player"){}
-Player::Player(std::string name) : health(100), name(name) {}
-Player::Player(std::string name,int health) : name(name), health(health) {}
