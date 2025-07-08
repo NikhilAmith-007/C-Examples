@@ -1,18 +1,25 @@
 #include "Classes.h"
 #include <iostream>
 #include <string>
+#include <ctime>
 
 using namespace std;
 
 
-Accounts::Accounts(const string acc_name, double acc_balance, const int acc_number): name{acc_name}, balance{acc_balance}, account_number{acc_number} {}
 
-Accounts::Accounts(const string acc_name, const int acc_number): Accounts{acc_name, 0.0, acc_number} {}
+Accounts::Accounts(const string acc_name, double acc_balance): name{acc_name}, balance{acc_balance}{
+    account_number = set_account_number();
+    cout << "Account created for " << name << " with initial balance: $" << balance << endl;
+    cout << "Account Number: " << account_number << endl;
+    cout << "------------------------" << endl;
+}
 
-Accounts::Accounts(const string acc_name): Accounts{acc_name, 0.0,-1} {}
-Accounts::Accounts(): Accounts{"Default Account", 0.0, -1} {}
+Accounts::Accounts(const string acc_name): Accounts{acc_name, 0.0} {account_number = set_account_number();}
+Accounts::Accounts(): Accounts{"Default Account", 0.0} {account_number = set_account_number();}
 
-
+int Accounts:: set_account_number() {
+    return 100000+ (rand() % 1000000);
+}
 void Accounts::display(){
     cout << "Account Name: " << name << endl;
     cout << "Balance: $" << balance << endl;

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 #include <string>
 
 using namespace std;
@@ -10,10 +11,10 @@ private:
     string name;
     double balance;
     int account_number;
+    int set_account_number();
 
 public:
-    Accounts(const string acc_name,double acc_balance,const int acc_number);
-    Accounts(const string acc_name, const int acc_number);
+    Accounts(const string acc_name,double acc_balance);
     Accounts(const string acc_name);
     Accounts();
 
